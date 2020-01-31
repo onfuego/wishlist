@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<p id="demo">Escribe aqui:</p>
+<form>
+<input id='product' type="text" name="product" onkeyup="myFunction()">
+</br></br></br>
+<input id='test' type="text" name="test">
+<input type="submit">
+</form>
+
+
+
+<script>
+function myFunction() {
+	var x = document.getElementById("product").value;
+	document.getElementById("test").value = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>
+

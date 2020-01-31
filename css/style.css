@@ -22,7 +22,7 @@
     border-radius: 5px;
 
   }
-  .brand_logo_container {
+  .user_img_container_lg {
     position: absolute;
     height: 170px;
     width: 170px;
@@ -117,4 +117,14 @@
   border-radius: 50%;
   color:white;
   text-decoration:none;
+  }
+
+  .user_img_container_sm {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    float: right;
+    margin-right: 25px;
+    margin-top: 20px;
   }

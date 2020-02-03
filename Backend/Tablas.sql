@@ -1,6 +1,6 @@
 Usuario --> ID, Nombre, Apellido, fecha de nacimiento, e-mail, password
 
-CREATE TABLE USER (
+CREATE TABLE user (
   id int NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(50),
   apellido VARCHAR(50),

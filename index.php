@@ -53,7 +53,7 @@ if (empty($_SESSION['nombre'])){
 							</div>
 						</div>
 							<div class="d-flex justify-content-center mt-3 login_container">
-				 	      <button type="submit"name="button" value="Iniciar sesion" class="btn login_btn">Login</button>
+				 	      <button type="submit" name="button" value="Iniciar sesion" class="btn login_btn">Login</button>
 				      </div>
               <div class="d-flex justify-content-center mt-3 login_container">
                 <button type="button" name="button" class="btn facebook_btn"><i class="fab fa-facebook-square"></i> Facebook</button>
@@ -78,7 +78,6 @@ if (empty($_SESSION['nombre'])){
 <?php
 
 }else{
-  print 'bienvenido '.$_SESSION['nombre'].'<br>
-  <p><a href="cerrar.php">Cerrar Sesion</a></p>';
+  header ('location: ./search.php');
 }
 ?>

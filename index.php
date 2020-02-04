@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (empty($_SESSION['nombre'])){
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -29,18 +33,18 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form>
+					<form action="validar.php" method="post" enctype="application/x-ww-form-urlencoded">
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="" class="form-control input_user" value="" placeholder="Usuario">
+							<input type="text" id="caja1" name="usuario" class="form-control input_user" value="" placeholder="Usuario">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="" class="form-control input_pass" value="" placeholder="Contraseña">
+							<input type="password" id="caja2" name="password" class="form-control input_pass" value="" placeholder="Contraseña">
 						</div>
 						<div class="form-group">
 							<div class="custom-control custom-checkbox">
@@ -49,7 +53,7 @@
 							</div>
 						</div>
 							<div class="d-flex justify-content-center mt-3 login_container">
-				 	      <button onclick="location='search.html'" type="button" name="button" class="btn login_btn">Login</button>
+				 	      <button type="submit"name="button" value="Iniciar sesion" class="btn login_btn">Login</button>
 				      </div>
               <div class="d-flex justify-content-center mt-3 login_container">
                 <button type="button" name="button" class="btn facebook_btn"><i class="fab fa-facebook-square"></i> Facebook</button>
@@ -59,7 +63,7 @@
 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						¿No tienes una cuenta? <a href="registro.html" class="ml-2">Regístrate</a>
+						¿No tienes una cuenta? <a href="registrar.php" class="ml-2">Regístrate</a>
 					</div>
 					<div class="d-flex justify-content-center links">
 						<a href="#">¿Olvidaste tu contraseña?</a>
@@ -71,3 +75,10 @@
 </body>
 
 </html>
+<?php
+
+}else{
+  print 'bienvenido '.$_SESSION['nombre'].'<br>
+  <p><a href="cerrar.php">Cerrar Sesion</a></p>';
+}
+?>
